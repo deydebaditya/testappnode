@@ -23,4 +23,5 @@ app.get('/profile/:name',function(req,res){
 
 
 
-app.listen(3333);//listen to a port
+app.listen(8080);//listen to a port
+console.log('Server listening on port 8080')
