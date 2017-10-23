@@ -4,9 +4,11 @@ var app = express();
 app.set('view engine','ejs');
 
 app.get('/',function(req,res){
+	console.log('Home requested');
 	res.render('index');//express is clever enough to figure out the content type
 });
 app.get('/contact',function(req,res){
+	console.log('Requested contact');
 	res.render('contact');
 });
 
