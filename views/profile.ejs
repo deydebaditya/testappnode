@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link href="/assests/styles.css" rel="stylesheet" type="text/css"/>
+	</head>	
+	<body>
+		<% include partials/nav.ejs %><!-- including a partial view for common view on all html-->
+		<h1>Welcome!</h1>
+		<p>This is <%=person%>, Age <%=data.age%>, Job : <%=data.job%></p><!--<!%=<objname>%!> is used to output data passed from js, Ignore the exclamation marks inside the commented syntax!-->
+		<h2>Hobbies</h2>
+		<ul>
+			<!--outputting JS code in EJS-->
+			<%data.hobbies.forEach( function(item) {%><!--cycling through data-->
+					<li><%=item%></li>
+				<%});%>
+		</ul>
+	</body>
+</html>
